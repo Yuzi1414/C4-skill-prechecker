@@ -1,0 +1,100 @@
+# ============================================================
+# 交付物预检器 · 挑战注册表（数据驱动）
+# 新增/修改挑战：直接在下面加一条记录即可，无需改任何代码。
+# 语法约定（本技能自带极简 YAML 解析器，请遵循）：
+#   · 字符串一律用双引号 "" 包裹（含中文/含空格）
+#   · 列表用 ["a", "b"]；对象用 {"key": "value"}
+#   · 布尔用 true / false；缩进统一 2 空格
+#   · core: true = 核心交付物（缺失触发 missing_artifacts 红线）
+# ============================================================
+
+challenges:
+  C1:
+    title: "课程资料翻译"
+    id: ""
+    name_prefix: "yml_C1"
+    aliases: ["翻译", "translation", "glossary"]
+    red_lines: ["missing_artifacts", "no_ai_log"]
+    required:
+      - {"key": "glossary", "label": "术语表 glossary", "patterns": ["glossary"], "core": true}
+      - {"key": "readme", "label": "项目说明 README", "patterns": ["readme"], "core": true}
+      - {"key": "aar", "label": "复盘 AAR", "patterns": ["aar", "复盘"], "core": false}
+      - {"key": "sourcing", "label": "拿来说明", "patterns": ["拿来", "sourcing"], "core": false}
+
+  C2:
+    title: "AI for Math 论文"
+    id: "ch-20260717031343-8ot0ji"
+    name_prefix: "yml_C2"
+    aliases: ["论文", "ai4math", "math", "paper"]
+    red_lines: ["missing_artifacts", "no_ai_log"]
+    required:
+      - {"key": "paper", "label": "论文 paper", "patterns": ["paper"], "core": true}
+      - {"key": "refs", "label": "参考文献 references.bib", "patterns": ["reference", "bib"], "core": true}
+      - {"key": "aar", "label": "复盘 AAR", "patterns": ["aar", "复盘"], "core": false}
+      - {"key": "sourcing", "label": "拿来说明", "patterns": ["拿来", "sourcing"], "core": false}
+      - {"key": "ai_log", "label": "AI 日志", "patterns": ["ai日志", "ai_log"], "core": false}
+
+  C2A:
+    title: "AGI 认知能力 · 提案"
+    id: "ch-20260717031352-tlg70p"
+    name_prefix: "yml_C2A"
+    aliases: ["提案", "proposal", "c2a"]
+    red_lines: ["missing_artifacts", "no_ai_log"]
+    required:
+      - {"key": "proposal", "label": "提案 proposal", "patterns": ["proposal"], "core": true}
+      - {"key": "sourcing", "label": "拿来说明", "patterns": ["拿来", "sourcing"], "core": false}
+
+  C9:
+    title: "AGI 认知能力 · 基准测试"
+    id: "ch-20260717031352-tlg70p"
+    name_prefix: "yml_C9"
+    aliases: ["基准", "benchmark", "c9", "metacog", "认知", "c2ac9"]
+    red_lines: ["missing_artifacts", "no_ai_log"]
+    required:
+      - {"key": "benchmark", "label": "基准测试包 benchmark/", "patterns": ["benchmark"], "core": true}
+      - {"key": "test_result", "label": "测试结果", "patterns": ["测试结果", "test_result", "test-result"], "core": true}
+      - {"key": "ai_log", "label": "AI 日志", "patterns": ["ai日志", "ai_log"], "core": false}
+      - {"key": "aar", "label": "复盘 AAR", "patterns": ["aar", "复盘"], "core": false}
+
+  C3:
+    title: "群内高质量参与"
+    id: "ch-20260717031407-ez6fae"
+    name_prefix: "yml_C3"
+    aliases: ["参与", "互动", "interaction", "reflection"]
+    red_lines: ["missing_artifacts"]
+    required:
+      - {"key": "interaction", "label": "互动记录 interaction_log", "patterns": ["interaction"], "core": true}
+      - {"key": "reflection", "label": "反思 reflection", "patterns": ["reflection"], "core": false}
+
+  C4:
+    title: "技能分享与传播"
+    id: "ch-20260717031424-4cdgor"
+    name_prefix: "yml_C4"
+    aliases: ["技能", "skill", "分享", "传播"]
+    red_lines: ["missing_artifacts", "no_ai_log", "one_shot_ai"]
+    required:
+      - {"key": "skill_doc", "label": "技能说明 skill说明", "patterns": ["skill说明", "skill_说明"], "core": true}
+      - {"key": "skill_pkg", "label": "可执行技能包(.skill/.py/SKILL.md)", "patterns": [".skill", ".py", "skill.md"], "core": true}
+      - {"key": "demo", "label": "Demo 演示(demo.mp4/截图)", "patterns": ["demo"], "core": true}
+      - {"key": "teaching", "label": "教学说明", "patterns": ["教学"], "core": false}
+      - {"key": "ai_log", "label": "AI 日志", "patterns": ["ai日志", "ai_log"], "core": false}
+
+  C6:
+    title: "文件命名·目录·权限·版本恢复"
+    id: ""
+    name_prefix: "yml_C6"
+    aliases: ["命名", "权限", "版本", "version", "目录"]
+    red_lines: ["missing_artifacts"]
+    required:
+      - {"key": "rules", "label": "制度规则模板", "patterns": ["模板", "规则", "命名"], "core": true}
+      - {"key": "rollback", "label": "版本回退测试截图", "patterns": ["回退", "rollback", ".png", ".jpg", ".jpeg"], "core": true}
+      - {"key": "register", "label": "C1 总目录登记", "patterns": ["登记", "总目录"], "core": false}
+
+  C7:
+    title: "内容传播（交付物清单待确认）"
+    id: ""
+    name_prefix: "yml_C7"
+    aliases: ["传播", "内容", "content"]
+    red_lines: ["missing_artifacts"]
+    required:
+      - {"key": "content", "label": "传播内容（待确认）", "patterns": ["传播", "content"], "core": false}

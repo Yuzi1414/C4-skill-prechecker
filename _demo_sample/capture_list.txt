@@ -1,0 +1,9 @@
+﻿可用挑战：
+  C1 — 课程资料翻译  [别名: 翻译、translation、glossary]
+  C2 — AI for Math 论文  [别名: 论文、ai4math、math、paper]
+  C2A — AGI 认知能力 · 提案  [别名: 提案、proposal、c2a]
+  C9 — AGI 认知能力 · 基准测试  [别名: 基准、benchmark、c9、metacog、认知、c2ac9]
+  C3 — 群内高质量参与  [别名: 参与、互动、interaction、reflection]
+  C4 — 技能分享与传播  [别名: 技能、skill、分享、传播]
+  C6 — 文件命名·目录·权限·版本恢复  [别名: 命名、权限、版本、version、目录]
+  C7 — 内容传播（交付物清单待确认）  [别名: 传播、内容、content]
